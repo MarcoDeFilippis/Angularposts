@@ -1,0 +1,12 @@
+<div class="container" [ngClass]="{'liked': post.loveIts > 0, 'disliked': post.loveIts < 0}">
+  <div class="row">
+    <h4 id="title">{{post.title}}</h4>
+    <p>{{post.created_at | date}} </p>
+  </div>
+  <div>
+    <p>{{post.content}}</p>
+    <button class="btn btn-success button" (click)="onLike()">love it</button>
+    <button class="btn btn-danger" (click)="onDislike()">don't love it</button>
+    <p> love it :{{post.loveIts}}</p>
+  </div>
+</div>
